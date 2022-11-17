@@ -12,7 +12,7 @@ class Main {
         int cont;
         Scanner scanner = new Scanner(System.in);
         do {
-            out.println("Press 1 to add an item.\nPress 2 to delete an item.\nPress 3 to update an item.\nPress 4 to show all items.\nPress 5 to quit the program.");
+            out.println("Press 1 to add an item.\nPress 2 to delete an item.\nPress 3 to update an item.\nPress 4 to show all items.\nPress 5 to quit the program.\n");
             cont = scanner.nextInt();
             scanner.nextLine();
             switch (cont) {
