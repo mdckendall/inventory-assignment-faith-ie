@@ -1,7 +1,7 @@
 {
   "tests": [
     {
-      "name": "Add item",
+      "name": "Add item tc",
       "setup": "javac Main.java",
       "run": "java -classpath .:target/dependency/* Main",
       "input": "1\r\n5\r\n1\r\n2\r\n4\r\n5\r\n",
@@ -11,17 +11,17 @@
       "points": null
     },
     {
-      "name": "Update",
+      "name": "Update tc",
       "setup": "javac Main.java",
       "run": "java -classpath .:target/dependency/* Main",
       "input": "1\r\nB\r\n2\r\n3\r\n3\r\n2\r\nA\r\n7\r\n4\r\n5\r\n",
-      "output": "Press 1 to add an item.\r\nPress 2 to delete an item.\r\nPress 3 to update an item.\r\nPress 4 to show all the items.\r\nPress 5 to quit the program.\r\nEnter the name:\r\nEnter the serial number:\r\nEnter the value in dollars (whole number):\r\nPress 1 to add an item.\r\nPress 2 to delete an item.\r\nPress 3 to update an item.\r\nPress 4 to show all the items.\r\nPress 5 to quit the program.\r\nEnter the serial number of the item to change:\r\nEnter the new name:\r\nEnter the new value in dollars (whole number):\r\nPress 1 to add an item.\r\nPress 2 to delete an item.\r\nPress 3 to update an item.\r\nPress 4 to show all the items.\r\nPress 5 to quit the program.\r\nA,2,7\r\nPress 1 to add an item.\r\nPress 2 to delete an item.\r\nPress 3 to update an item.\r\nPress 4 to show all the items.\r\nPress 5 to quit the program.",
+      "output": "A,2,7",
       "comparison": "included",
       "timeout": 10,
       "points": null
     },
     {
-      "name": "Exit",
+      "name": "Exit tc",
       "setup": "javac Main.java",
       "run": "java -classpath .:target/dependency/* Main",
       "input": "5\r\n",
