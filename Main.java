@@ -52,9 +52,6 @@ class Main {
                             out.println("Enter the new value in dollars (whole number):");
                             i._value = scanner.nextInt();
                         }
-                        if (!i._serialNumber.equalsIgnoreCase(serialNumber)) {
-                            out.println("Could not find serial number in the database.");
-                        }
                     }
                     break;
                 case 4:
