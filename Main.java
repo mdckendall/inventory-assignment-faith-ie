@@ -35,13 +35,9 @@ class Main {
                         if (i._serialNumber.equalsIgnoreCase(serialNumber)) {
                             a.add(i);
                         }
-                        if (!i._serialNumber.equalsIgnoreCase(serialNumber)) {
-                            out.println("Could not find serial number in the database.");
-                        }
                     }
                     try {
                         inventoryArrayList.removeAll(a);
-                        out.println("Done. Removed " + a.size() + " items.");
                     } catch (NullPointerException e) {
                         out.println(e.getMessage());
                     }
