@@ -42,11 +42,26 @@ class Main {
                         out.println(e.getMessage());
                     }
                     break;
-
+                case 3:
+                    out.println("Enter the serial number of the item to change:");
+                    serialNumber = scanner.nextLine();
+                    for (Inventory i : inventoryArrayList) {
+                        if (i._serialNumber.equalsIgnoreCase(serialNumber)) {
+                            out.println("Enter the new name:");
+                            i._name = scanner.nextLine();
+                            out.println("Enter the new value in dollars (whole number):");
+                            i._value = scanner.nextInt();
+                        }
+                        if (!i._serialNumber.equalsIgnoreCase(serialNumber)) {
+                            out.println("Could not find serial number in the database.");
+                        }
+                    }
+                    break;
                 case 4:
                     for (Inventory i : inventoryArrayList) {
                         out.println(i._name + "," + i._serialNumber + "," + i._value);
                     }
+                    break;
             }
         } while (cont != 5);
     }
