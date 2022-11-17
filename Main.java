@@ -60,7 +60,6 @@ class Main {
                     }
                     break;
             }
-            out.println("\n");
         } while (cont != 5);
     }
 
