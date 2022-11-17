@@ -16,7 +16,7 @@ class Main {
             cont = scanner.nextInt();
             scanner.nextLine();
             switch (cont) {
-                case 1 -> {
+                case 1:
                     out.println("Enter the name:");
                     name = scanner.nextLine();
                     out.println("Enter the serial number:");
@@ -26,8 +26,8 @@ class Main {
                     scanner.nextLine();
                     Inventory inv = new Inventory(name, serialNumber, value);
                     inventoryArrayList.add(inv);
-                }
-                case 2 -> {
+                    break;
+                case 2:
                     out.println("Enter the serial number of the item to delete:");
                     serialNumber = scanner.nextLine();
                     ArrayList<Inventory> a = new ArrayList<>();
@@ -45,27 +45,12 @@ class Main {
                     } catch (NullPointerException e) {
                         out.println(e.getMessage());
                     }
-                }
-                case 3 -> {
-                    out.println("Enter the serial number of the item to change:");
-                    serialNumber = scanner.nextLine();
-                    for (Inventory i : inventoryArrayList) {
-                        if (i._serialNumber.equalsIgnoreCase(serialNumber)) {
-                            out.println("Enter the new name:");
-                            i._name = scanner.nextLine();
-                            out.println("Enter the new value in dollars (whole number):");
-                            i._value = scanner.nextInt();
-                        }
-                        if (!i._serialNumber.equalsIgnoreCase(serialNumber)) {
-                            out.println("Could not find serial number in the database.");
-                        }
-                    }
-                }
-                case 4 -> {
+                    break;
+
+                case 4:
                     for (Inventory i : inventoryArrayList) {
                         out.println(i._name + "," + i._serialNumber + "," + i._value);
                     }
-                }
             }
         } while (cont != 5);
     }
