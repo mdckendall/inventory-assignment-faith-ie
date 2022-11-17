@@ -32,7 +32,7 @@ class Main {
                     serialNumber = scanner.nextLine();
                     ArrayList<Inventory> a = new ArrayList<>();
                     for (Inventory i : inventoryArrayList) {
-                        if (i._serialNumber.equalsIgnoreCase(serialNumber)) {
+                        if (i._serialNumber.equals(serialNumber)) {
                             a.add(i);
                         }
                     }
@@ -46,7 +46,7 @@ class Main {
                     out.println("Enter the serial number of the item to change:");
                     serialNumber = scanner.nextLine();
                     for (Inventory i : inventoryArrayList) {
-                        if (i._serialNumber.equalsIgnoreCase(serialNumber)) {
+                        if (i._serialNumber.equals(serialNumber)) {
                             out.println("Enter the new name:");
                             i._name = scanner.nextLine();
                             out.println("Enter the new value in dollars (whole number):");
@@ -60,6 +60,7 @@ class Main {
                     }
                     break;
             }
+            out.println("\n");
         } while (cont != 5);
     }
 
